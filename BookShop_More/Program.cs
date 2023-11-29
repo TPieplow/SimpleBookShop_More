@@ -8,8 +8,8 @@ namespace BookShop_More;
 
 public class Program
 {
-    private readonly List<Books> bookList = [];
-    private readonly List<Customers> customerList = [];
+    private readonly List<IBooks> bookList = [];
+    private readonly List<ICustomers> customerList = [];
     private readonly List<Employees> employeeList = [];
 
     public void BookShopMenu()

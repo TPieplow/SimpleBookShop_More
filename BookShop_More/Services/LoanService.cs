@@ -7,7 +7,7 @@ namespace BookShop_More.Services;
 public class LoanService
 {
 
-    public static bool BorrowBook(List<Books> bookList, Func<IBooks, bool> borrowFunction)
+    public static bool BorrowBook(List<IBooks> bookList, Func<IBooks, bool> borrowFunction)
     {
         if (bookList == null || bookList.Count == 0)
         {
@@ -20,7 +20,7 @@ public class LoanService
             Console.Write("Enter ISBN: ");
             if (int.TryParse(Console.ReadLine(), out int isbn))
             {
-                Books? loanBook = bookList.FirstOrDefault(x => x.ISBN == isbn);
+                IBooks loanBook = bookList.FirstOrDefault(x => x.ISBN == isbn);
                 if (loanBook == null)
                 {
                     DisplayMessage.DisplayMessageAndWait("No book with the given ISBN.");

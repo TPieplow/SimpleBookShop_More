@@ -12,3 +12,4 @@ C:\EC\csharp\BookShop_More\BookShop_More\obj\Debug\net8.0\refint\BookShop_More.d
 C:\EC\csharp\BookShop_More\BookShop_More\obj\Debug\net8.0\BookShop_More.pdb
 C:\EC\csharp\BookShop_More\BookShop_More\obj\Debug\net8.0\BookShop_More.genruntimeconfig.cache
 C:\EC\csharp\BookShop_More\BookShop_More\obj\Debug\net8.0\ref\BookShop_More.dll
+C:\EC\csharp\BookShop_More\BookShop_More\obj\Debug\net8.0\BookShop_More.sourcelink.json

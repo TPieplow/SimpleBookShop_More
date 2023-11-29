@@ -1,9 +1,10 @@
-﻿using BookShop_More.Models;
+﻿using BookShop_More.Interfaces;
+using BookShop_More.Models;
 namespace BookShop_More.Services;
 
 public class ViewSingleBook
 {
-    public static void ViewSingleBookSearch(List<Books> bookList)
+    public static void ViewSingleBookSearch(List<IBooks> bookList)
     {
         Console.Write("Enter ISBN to search for a book: ");
 
@@ -18,6 +19,7 @@ public class ViewSingleBook
                 Console.WriteLine($"ISBN: {foundBook.ISBN}");
                 Console.WriteLine("Press any key to continue");
                 Console.ReadKey();
+                
             }
             else
             {

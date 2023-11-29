@@ -1,5 +1,6 @@
 ﻿namespace BookShop_More.Services;
 
+using BookShop_More.Interfaces;
 using BookShop_More.Models;
 using BookShop_More.UI;
 using System;
@@ -9,7 +10,7 @@ using System.Collections.Generic;
 
 public class AddBook
 {
-    public static void AddBookToList(List<Books> bookList)
+    public static void AddBookToList(List<IBooks> bookList)
     {
         Console.WriteLine("Add a book to the system");
         Console.Write("Title: ");
@@ -33,7 +34,7 @@ public class AddBook
                         Console.Write("Loan period (days):");
                         if (int.TryParse(Console.ReadLine(), out int loanPeriod))
                         {
-                            Books newLoanBook = new LoanBook(title, author, isbn, loanPeriod);
+                            IBooks newLoanBook = new LoanBook(title, author, isbn, loanPeriod);
                             bookList.Add(newLoanBook);
                             Console.WriteLine($"'{newLoanBook}' added successfully");
                         }
@@ -46,7 +47,7 @@ public class AddBook
                     case 2:
                         Console.Write("Add narrator:");
                         string narrator = Console.ReadLine()!;
-                        Books newAudioBook = new AudioBook(title, author, isbn, narrator);
+                        IBooks newAudioBook = new AudioBook(title, author, isbn, narrator);
                         bookList.Add(newAudioBook);
                         DisplayMessage.DisplayMessageAndWait($"{newAudioBook} added successfully");
                         break;
@@ -55,7 +56,7 @@ public class AddBook
                         Console.Write("Book price:");
                         if (int.TryParse(Console.ReadLine(), out int bookPrice))
                         {
-                            Books newPurchasableBook = new PurchasableBook(title, author, isbn, bookPrice);
+                            IBooks newPurchasableBook = new PurchasableBook(title, author, isbn, bookPrice);
                             bookList.Add(newPurchasableBook);
                             DisplayMessage.DisplayMessageAndWait($"{newPurchasableBook} added successfully");
                         }

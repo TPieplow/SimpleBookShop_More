@@ -7,7 +7,7 @@ namespace BookShop_More.Services;
 
 public class ViewAllBooks
 {
-    public static void ViewAllBooksSearch(List<Books> bookList)
+    public static void ViewAllBooksSearch(List<IBooks> bookList)
     {
         if (bookList != null && bookList.Count > 0)
         {
@@ -17,7 +17,6 @@ public class ViewAllBooks
 
             foreach (var bookType in bookTypes)
             {
-
                 Console.WriteLine($"Books of type {bookType}\n");
 
                 var booksOfType = bookList.Where(book => book.GetType().Name == bookType);

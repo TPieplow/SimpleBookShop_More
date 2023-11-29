@@ -1,11 +1,12 @@
-﻿using BookShop_More.Models;
+﻿using BookShop_More.Interfaces;
+using BookShop_More.Models;
 using BookShop_More.UI;
 
 namespace BookShop_More.Services;
 
 public class RegisterMembership
 {
-    public static void Register(List<Customers> customerList)
+    public static void Register(List<ICustomers> customerList)
     {
         string[] regFields =
         {
@@ -16,7 +17,8 @@ public class RegisterMembership
             "phone number"
         };
 
-        Customers newCustomer = new();
+
+        ICustomers newCustomer = new Customers();
 
         for (int i = 0; i < regFields.Length; i++)
         {

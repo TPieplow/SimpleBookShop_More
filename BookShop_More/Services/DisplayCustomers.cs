@@ -6,23 +6,24 @@ namespace BookShop_More.Services;
 
 public class DisplayCustomers
 {
-    public static void Customers(List<Customers> customerList)
+    public static void Customers(List<ICustomers> customerList)
     {
         if (customerList != null)
         {
-            foreach (Customers customer in customerList)
+            foreach (ICustomers customer in customerList)
             {
                 DisplayCustomerDetails(customer);
+                Console.ReadKey();
             }
         }
         else
         {
             DisplayMessage.DisplayMessageAndWait("No available customers");
+           
         }
-        Console.ReadKey();
     }
 
-    private static void DisplayCustomerDetails(Customers customer)
+    private static void DisplayCustomerDetails(ICustomers customer)
     {
         Console.Clear();
         Console.WriteLine("\t### MEMBER ###");
