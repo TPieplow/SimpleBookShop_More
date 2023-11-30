@@ -4,7 +4,7 @@
     {
 
 
-        public PurchasableBook(string title, string author, int isbn, int price) : base(title, author, isbn)
+        public PurchasableBook(string title, string author, int isbn, int price) : base(title, author, isbn, true, null, null)
         {
             this.BookPrice = price;
         }

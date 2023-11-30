@@ -7,7 +7,7 @@ namespace BookShop_More.Models
         public string Narrator { get; set; }
 
         public AudioBook(string title, string author, int isbn, string narrator)
-            : base(title, author, isbn)
+            : base(title, author, isbn, true, null, null)
         {
             Narrator = narrator;
         }

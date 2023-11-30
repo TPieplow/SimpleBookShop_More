@@ -7,7 +7,6 @@
         int? ISBN { get; set; }
         string Title { get; set; }
         int? LoanPeriod { get; set; }
- 
 
         bool Borrow();
     }

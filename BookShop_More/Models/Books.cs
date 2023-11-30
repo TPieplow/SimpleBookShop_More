@@ -2,11 +2,24 @@
 
 namespace BookShop_More.Models;
 
-public class Books(string title, string author, int isbn) : IBooks
+public class Books : IBooks
 {
-    public string Title { get; set; } = title;
-    public string Author { get; set; } = author;
-    public int? ISBN { get; set; } = isbn;
+    public Books() { }
+
+
+    public Books(string title, string author, int? iSBN, bool isAvailable, int? loanPeriod, int? bookPrice)
+    {
+        Title = title;
+        Author = author;
+        ISBN = iSBN;
+        IsAvailable = isAvailable;
+        LoanPeriod = loanPeriod;
+        BookPrice = bookPrice;
+    }
+
+    public string Title { get; set; } 
+    public string Author { get; set; } 
+    public int? ISBN { get; set; } 
     public bool IsAvailable { get; set; } = true;
     public int? LoanPeriod { get; set; }
     public int? BookPrice { get; set; }
